@@ -12,23 +12,23 @@ dependencies:
 vendor-dependencies:
   x86_64-pc-windows-msvccoff:
     - libsodium
-  osx_x64_clang:
-    - libsodium
-  debian_x64_gcc:
-    - libsodium
+  x86_64-apple-macosx-macho:
+    - sodium
+  x86_64-pc-linux-gnu:
+    - sodium
 
 platform-dependencies:
   x86_64-pc-windows-msvccoff: []
-  debian_x64_gcc: []
+  x86_64-pc-linux-gnu: []
 
 platform-compile-flags:
   x86_64-pc-windows-msvccoff:
     - "/std:c++latest"
-  osx_x64_clang: 
+  x86_64-apple-macosx-macho: 
     - "-std=c++1z"
     - "-stdlib=libc++"
     - "-Wc++11-extensions"
-  debian_x64_gcc: 
+  x86_64-pc-linux-gnu: 
     - "-std=gnu++1z"
     - "-pthread"
     - "-fpermissive"
@@ -40,8 +40,8 @@ platform-link-flags:
 platform-defines:
   x86_64-pc-windows-msvccoff:
     _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS: yes
-  osx_x64_clang: {}
-  debian_x64_gcc: {}
+  x86_64-apple-macosx-macho: {}
+  x86_64-pc-linux-gnu: {}
   
 artifacts:
   library:

@@ -1,6 +1,9 @@
 #include "sodium/common.h"
 #include "publickey.h"
 
+#include "lisp/library/libraries.h"
+#include "lisp/library/system/prelude.h"
+
 using namespace craft;
 using namespace craft::types;
 using namespace craft::lisp;

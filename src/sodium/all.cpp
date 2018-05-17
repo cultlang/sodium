@@ -76,7 +76,7 @@ instance<Module> cultlang::sodium::make_sodium_bindings(instance<lisp::Namespace
 	return ret;
 }
 
-BuiltinModuleDescription cultlang::sodium::BuiltinSodium("cult/sodium", cultlang::sodium::make_sodium_bindings);
+CRAFT_INIT_PRIORITY BuiltinModuleDescription cultlang::sodium::BuiltinSodium("cult/sodium", cultlang::sodium::make_sodium_bindings);
 
 
 #include "types/dll_entry.inc"

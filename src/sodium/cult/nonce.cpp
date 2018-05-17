@@ -1,5 +1,8 @@
-#include "lisp/common.h"
+#include "sodium/common.h"
 #include "nonce.h"
+
+#include "lisp/library/libraries.h"
+#include "lisp/library/system/prelude.h"
 
 using namespace craft;
 using namespace craft::types;
