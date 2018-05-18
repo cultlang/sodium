@@ -26,10 +26,8 @@ using namespace cultlang::sodium;
 instance<Module> cultlang::sodium::make_sodium_bindings(instance<lisp::Namespace> ns, instance<> loader)
 {
 	auto ret = instance<Module>::make(ns, loader);
-	auto sem = instance<CultSemantics>::make(ret);
-	ret->builtin_setSemantics(sem);
-
-	auto semantics = ret->require<CultSemantics>();
+	auto semantics = instance<CultSemantics>::make(ret);
+	ret->builtin_setSemantics(semantics);
 
 	lMM(SoD"/hash", [](instance<mpf_class> a) { auto res = t_hsh::make(); hsh(mpf_class); return res; });
 	lMM(SoD"/hash", [](instance<int32_t> a) { auto res = t_hsh::make(); hsh(int32_t); return res; });
