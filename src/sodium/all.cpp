@@ -29,7 +29,6 @@ instance<Module> cultlang::sodium::make_sodium_bindings(instance<lisp::Namespace
 	auto semantics = instance<CultSemantics>::make(ret);
 	ret->builtin_setSemantics(semantics);
 
-	lMM(SoD"/hash", [](instance<mpf_class> a) { auto res = t_hsh::make(); hsh(mpf_class); return res; });
 	lMM(SoD"/hash", [](instance<int32_t> a) { auto res = t_hsh::make(); hsh(int32_t); return res; });
 	lMM(SoD"/hash", [](instance<uint8_t> a) { auto res = t_hsh::make(); hsh(uint8_t); return res; });
 	lMM(SoD"/hash", [](instance<int8_t> a) { auto res = t_hsh::make(); hsh(int8_t); return res; });
@@ -40,8 +39,6 @@ instance<Module> cultlang::sodium::make_sodium_bindings(instance<lisp::Namespace
 	lMM(SoD"/hash", [](instance<bool> a) { auto res = t_hsh::make(); hsh(bool); return res; });
 	lMM(SoD"/hash", [](instance<double> a) { auto res = t_hsh::make(); hsh(double); return res; });
 	lMM(SoD"/hash", [](instance<int64_t> a) { auto res = t_hsh::make(); hsh(int64_t); return res; });
-	lMM(SoD"/hash", [](instance<mpq_class> a) { auto res = t_hsh::make(); hsh(mpq_class); return res; });
-	lMM(SoD"/hash", [](instance<mpz_class> a) { auto res = t_hsh::make(); hsh(mpz_class); return res; });
 	lMM(SoD"/hash", [](instance<int16_t> a) { auto res = t_hsh::make(); hsh(int16_t); return res; });
 	
 	lMM(SoD"/nonce", [](){ return  t_non::make();});
