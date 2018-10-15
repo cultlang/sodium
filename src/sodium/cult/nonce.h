@@ -1,7 +1,5 @@
 #pragma once
-#define SODIUM_STATIC
 #include "lisp/common.h"
-#include "sodium/sodium.h"
 
 namespace cultlang {
 namespace sodium {

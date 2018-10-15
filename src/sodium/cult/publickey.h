@@ -1,9 +1,6 @@
 #pragma once
 #include "sodium/common.h"
 
-#define SODIUM_STATIC
-#include "sodium/sodium.h"
-
 #include "all.h"
 
 namespace cultlang {

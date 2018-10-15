@@ -26,7 +26,7 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
 #define SODIUM_STATIC
-#include "sodium/sodium.h"
+#include "sodium.h"
 
 // Deps
 #include "util/all.h"
